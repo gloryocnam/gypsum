@@ -1,0 +1,133 @@
+css/styles.css
+/* Configuración general */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    color: #333;
+}
+
+/* Header */
+header {
+    background: #005b96;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* Navegación */
+nav {
+    background: #003f63;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite que el menú se ajuste en móvil */
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    color: #00b4d8;
+}
+
+/* Secciones */
+section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+h2 {
+    color: #003f63;
+}
+
+/* Cards de servicios */
+.servicios-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Se ajusta en móviles */
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    width: 280px; /* Ajustado para móviles */
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Galería */
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+    gap: 15px;
+}
+
+.galeria-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Footer */
+footer {
+    background: #005b96;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* ------------------------------- */
+/* RESPONSIVE: Ajustes para móvil */
+/* ------------------------------- */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 25px 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .card {
+        width: 90%; /* Más ancho en celular */
+    }
+
+    .galeria-grid {
+        grid-template-columns: 1fr 1fr; /* Dos columnas en móviles */
+    }
+}
+
+@media (max-width: 480px) {
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+
+    .galeria-grid {
+        grid-template-columns: 1fr; /* Una columna en pantalla muy pequeña */
+    }
+}
